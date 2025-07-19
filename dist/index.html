@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lector Rápido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-CyDeGXvR.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BW0L8wn4.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Lector Rápido</h1>
+      <p>Pega tu texto, ajusta la velocidad y presiona iniciar.</p>
+    </header>
+    
+    <main>
+      <div id="display-box" class="display-box" aria-live="polite">...</div>
+      
+      <section class="controls-container" aria-label="Controles de lectura">
+        <textarea id="text-input" rows="8" placeholder="Pega tu texto aquí para comenzar..." aria-label="Área de texto para pegar el contenido"></textarea>
+        
+        <div class="slider-group">
+          <label for="wpm-slider">Velocidad: <span id="wpm-value">300</span> PPM</label>
+          <input type="range" id="wpm-slider" min="60" max="800" value="300" aria-controls="display-box">
+        </div>
+        
+        <fieldset class="options-group">
+          <legend>Modo de reproducción</legend>
+          <div>
+            <input type="radio" id="mode-once" name="play-mode" value="once" checked>
+            <label for="mode-once">Una vez</label>
+          </div>
+          <div>
+            <input type="radio" id="mode-loop" name="play-mode" value="loop">
+            <label for="mode-loop">Bucle infinito</label>
+          </div>
+        </fieldset>
+        
+        <div class="button-group">
+          <button id="start-pause-btn" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>Iniciar</span>
+          </button>
+          <button id="reset-btn" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+            <span>Reiniciar</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Construido con la ayuda de Gemini</p>
+    </footer>
+  </div>
+  
+</body>
+</html>
